@@ -2,6 +2,23 @@
     img {
         height: 100%;
         object-fit: cover; /*faz a cobertura de todo espaço que está sobrando*/
+    }
+
+    .card {
         border-radius: 4px;
+        overflow: hidden;
+        position: relative; /*Serve para que os elementos filhos posicionados como absolute se baseiem nesse card e não na página inteira.*/
+
+        &::before { /*Criação de pseudo-elemento com o &*/
+            content: ""; /*Pra criação desse elemento é necessário ter um conteúdo*/
+            position: absolute; /*Um posicionamento*/
+            inset: 0; /*é um atalho para top: 0; right: 0; bottom: 0; left: 0;*/
+            top: 50%; /*Pois a imagem tem um degradê iniciando da metade*/
+            background: linear-gradient(
+                180deg,
+                transparent 0%,
+                #020617 100%
+            );
+        }
     }
 }
