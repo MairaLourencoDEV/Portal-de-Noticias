@@ -40,18 +40,16 @@ h1,h2,h3 {
     font: inherit; /*Herda a cor do pai, no caso o body*/
 }
 
+img {
+    max-width: 100%; /*Que significa respeitar a largura máxima de 100% de acordo com a caixa*/
+}
+
 .container {
     max-width: 1280px;
     padding-inline: 32px;
     margin-inline: auto;
 }
 
-/*utility-first : quando tenho uma classe que fará apenas uma coisa*/
-.grid {
-    display: grid; /*Coloca um item abaixo do outro*/
-}
-
-/* aplica o grid como coluna, então os elementos ficarão lado a lado*/
-.grid-flow-col {
-    grid-auto-flow: column;
+main {
+    margin-top: 40px;
 }
