@@ -6,7 +6,7 @@
 
     .card {
         border-radius: 4px;
-        overflow: hidden;
+        overflow: hidden; /*Esconda tudo que passar da caixa*/
         position: relative; /*Serve para que os elementos filhos posicionados como absolute se baseiem nesse card e não na página inteira.*/
 
         &::before { /*Criação de pseudo-elemento com o &*/
@@ -19,6 +19,17 @@
                 transparent 0%,
                 #020617 100%
             );
+        }
+
+        figcaption {
+           position: absolute; 
+           bottom: 0;
+
+           padding: 24px;
+
+           h2 {
+            margin-top: 8px;
+           }
         }
     }
 }
